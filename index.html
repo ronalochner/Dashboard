@@ -15,7 +15,6 @@
    
 	<!-- TOGGLE Links -->
     <link rel="stylesheet" href="css/light.scss">
-    <link :disabled="!checked" rel="stylesheet" href="css/dark.scss"> <!--second stylesheet but set it as disabled until the checkbox is checked-->
    
     <!--[if lt IE 9]>
 	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
@@ -23,7 +22,7 @@
 
 </head>
 <body>
-       <container id="app">
+       <div id="app">
         	<!-- Navigation Starts Here -->
 
 			<div id="mySidenav" class="sidenav"> 
@@ -61,7 +60,7 @@
                      <div class="card-stacked">
                         <h1>INCOME</h1>
                         <br>
-                        <h4 id="total-income">{{message}}</h4> 
+                        <h4 id="total-income"></h4> 
                     </div>
                 </div>
 
@@ -151,41 +150,21 @@
           <caption>DATA SUMMARY</caption>
           <thead>
             <tr class="three columns">
-              <th scope="col">MONTH</th>
-              <th scope="col">MONTH</th>
-              <th scope="col">MONTH</th>
-              <th scope="col">MONTH</th>
+                <template>
+                    <th scope="col">MONTH</th>
+                </template>
             </tr>
           </thead>
           <tbody>
-            <tr class="three columns" id="january">
-              <td data-label="month"></td>
-              <td data-label="income"></td> 
-              <td data-label="expenses"></td>
-              <td data-label="hours"></td>
-              <td data-label="revenue"></td>
-            </tr>
-            <tr class="three columns">
-              <td data-label="month"></td>
-              <td data-label="income"></td> 
-              <td data-label="expenses"></td>
-              <td data-label="revenue"></td>
-              <td data-label="hours"></td>
-            </tr>
-            <tr class="three columns">
-              <td data-label="month"></td>
-              <td data-label="income"></td> 
-              <td data-label="expenses"></td>
-              <td data-label="revenue"></td>
-              <td data-label="hours"></td>
-            </tr>
-            <tr class="three columns">
-              <td data-label="month"></td>
-              <td data-label="income"></td> 
-              <td data-label="expenses"></td>
-              <td data-label="revenue"></td>
-              <td data-label="hours"></td>
+             <template v-for="value in tabledata">
+              <tr class="three columns">
+                  <td>{{ value.month }}</td>
+                  <td>{{ value.income }}</td> 
+                  <td>{{ value.expenses }}</td>
+                  <td>{{ value.hours }}</td>
              </tr>
+            </template>
+
           </tbody>
         </table>
      </div>
@@ -201,7 +180,7 @@
                     </div>
                 </div>
             </header>
-    </container>
+    </div>
 
     			<script>
 			function openNav() {

@@ -1,0 +1,72 @@
+/*
+Error: File to import not found or unreadable: mixins.
+       Load path: /Volumes/Rona/GITHUB/Dashboard/css
+        on line 10 of /Volumes/Rona/GITHUB/Dashboard/css/_base.scss
+        from line 1 of /Volumes/Rona/GITHUB/Dashboard/css/dark.scss
+
+5:   background-color: #cecece;
+6: }
+7: 
+8: main.Dark{
+9:   h1 {
+10:     color: #212121;
+11:   }
+12: 
+13:   i {
+14:     color: #cecece;
+15:     background: #212121;
+
+Backtrace:
+/Volumes/Rona/GITHUB/Dashboard/css/_base.scss:10
+/Volumes/Rona/GITHUB/Dashboard/css/dark.scss:1
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block (2 levels) in visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `map'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:328:in `block in visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `block in with_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:88:in `with_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
+/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `load'
+/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: mixins.\A        Load path: /Volumes/Rona/GITHUB/Dashboard/css\A         on line 10 of /Volumes/Rona/GITHUB/Dashboard/css/_base.scss\A         from line 1 of /Volumes/Rona/GITHUB/Dashboard/css/dark.scss\A \A 5:   background-color: #cecece;\A 6: }\A 7: \A 8: main.Dark{\A 9:   h1 {\A 10:     color: #212121;\A 11:   }\A 12: \A 13:   i {\A 14:     color: #cecece;\A 15:     background: #212121;"; }
