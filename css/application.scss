@@ -1,0 +1,321 @@
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #ffffff;
+
+@import url('vendor/normalize.css');
+@import url('vendor/skeleton.css');
+
+body {
+  font-family: $font-stack;
+  line-height: 1.25;
+  color: $primary-color;
+  background: $secondary-color;
+  margin: 0;
+}
+
+h1 {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: 20px;
+  margin: 5px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: 20px;
+  margin: 5px;
+}
+
+h3 {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: 25px;
+  margin: 5px;
+}
+
+h4 {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: 15px;
+  margin: 5px;
+}
+
+h5, p {
+  font-family: $font-stack;
+  color: $primary-color;
+  font-size: 25px;
+  margin: 5px;
+}
+
+.row {
+  background: $secondary-color;
+  min-height: 200px;
+  width: 100%;
+}
+
+.row1 {
+  min-height: 50px;
+  width: 100%;
+}
+
+#header {
+  height: 30px;
+  width: 100%;
+  text-align: right;
+  margin: 3px;
+}
+
+/* NAV */
+
+#hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  color: grey;
+  background-color: none;
+  display: block;
+  padding: 10px;
+  z-index: +1;
+  position: fixed;
+  cursor: pointer;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: $primary-color;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px;
+  a {
+    padding-top: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: $font-stack;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 3px;
+    &:hover {
+      color: $primary-color;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.offcanvas a:focus {
+  color: $primary-color;
+  background-color: $secondary-color;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+a.closebtn:hover {
+  background-color: $primary-color;
+}
+
+#app {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* STYLE SHEET TOGGLE */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  input {
+    display: none;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: $secondary-color;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+}
+
+input {
+  &:checked + .slider {
+    background-color: #2196F3;
+  }
+  &:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  &:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+}
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+  &:before {
+    border-radius: 50%;
+  }
+}
+
+/* ROW 1 */
+
+#absolute {
+  position: absolute;
+}
+
+.card-stacked {
+  position: relative;
+  text-align: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  padding: 3px;
+  z-index: 2;
+}
+
+.image img {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 1;
+  padding: 3px;
+}
+
+#expenses, #revenue, #hours {
+  background-color: $secondary-color;
+}
+
+/* ROW 2 */
+
+#graph-1 {
+  background-color: green;
+}
+
+#graph-2 {
+  background-color: lightskyblue;
+}
+
+/* ROW 3 */
+
+#weather {
+  background-color: orange;
+}
+
+#calendar, #clock {
+  background-color: lightgoldenrodyellow;
+}
+
+/* TABLE */
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+  caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  th, td {
+    padding: .625em;
+    text-align: center;
+  }
+  th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  caption {
+    font-size: 1.3em;
+  }
+  thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+    &:before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+/* FORM */
+
+div.form
+{   position: absolute;
+    display: block;
+    align-content: center;
+}
+
+form
+{   position: relative;
+    display: inline-block;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: left;
+}

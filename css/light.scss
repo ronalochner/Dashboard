@@ -1,0 +1,17 @@
+@import 'base';
+
+body {
+  color: #212121;
+  background-color: #cecece;
+}
+
+main.Dark{
+  h1 {
+    color: #212121;
+  }
+
+  i {
+    color: #cecece;
+    background: #212121;
+  }
+}

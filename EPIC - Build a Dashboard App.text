@@ -1,0 +1,35 @@
+EPIC - Build a Dashboard App
+
+USER STORIES
+
+- User wants to log income + expenses + working hours.
+- User wants to calculate his revenue based on income and expenses.
+- User wants to know What his current total Income is.
+- User wants to know What his current total Expenses is.
+- User wants to know What his current total Revenue is.
+- User wants to know What his current total Working Hours are.
+- User wants to add new data to the list.
+- User wants to switch between dark + light theme.
+
+Logic
+(*) Create a Data Table to input variables (income,expenses,revenue,hours) per month.
+(*) Create a div to input total Income.
+(*) Create a div to input total Expenses.
+(*) Create a div to input total Revenue.
+(*) Create a div to input total Working Hours.
+
+( ) Write a function that adds up all data with data-value=hours and pushes that value to Working Hours.
+( ) Write a function that adds up all data with data-value=income and pushes that value to Total Income.
+( ) Write a function that adds up all data with data-value=expenses and pushes that value to Total Expenses.
+( ) Write a function that subtracts Total Expenses from Total Income and pushes it to Total Revenue.
+( ) Create a Form where the user can input new data for variables. (Income, Expenses, Revenue and Hours)
+( ) Create a submit form button.
+( ) Create a toggle switch to switch out stylesheets.
+( ) Write function that enables/disables styles based on the switch. (Remember to set a default)
+
+- Brave / If I have time -
+( ) Write a function that pushes the submitted data into the Data table. 
+( ) Calendar Plugin
+( ) Weather Plugin
+( ) Random quote Plugin
+( ) Charts to show info.

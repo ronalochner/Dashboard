@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+   
+	<!-- meta data = brains -->
+		<meta charset="utf-8">
+		<meta name="description" content="Dashboard App for small business owners">
+		<meta name="keywords" content="desktop app, dashboard, SME">
+		<meta name="author" content="Rona Lochner">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+	<!-- CSS Links -->
+    <link rel="stylesheet" href="css/application.css">
+   
+	<!-- TOGGLE Links -->
+    <link rel="stylesheet" href="css/light.scss">
+    <link :disabled="!checked" rel="stylesheet" href="css/dark.scss"> <!--second stylesheet but set it as disabled until the checkbox is checked-->
+   
+    <!--[if lt IE 9]>
+	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+       <container id="app">
+        	<!-- Navigation Starts Here -->
+
+			<div id="mySidenav" class="sidenav"> 
+
+				  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+				  <a href="index.html">DASHBOARD<br><br></a>
+
+				  <a href="form.html">NEW ENTRY<br><br></a>
+
+			</div>
+
+			<span id="hamburger" onclick="openNav()">&#9776;</span>
+	
+
+	<!-- Navigation Ends Here -->
+          
+
+        <div class="row1" id="header">
+            <div><h1>DASHBOARD</h1></div>
+        </div>
+   	<!-- Totals Row Starts Here -->   
+        <div class="row">
+            <div class="three columns">
+
+                <div class="six columns" id="income">
+                    <div class="image">
+                        <br>
+                        <img src="img/income.png">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="six columns">
+                     <div class="card-stacked">
+                        <h1>INCOME</h1>
+                        <br>
+                        <h4 id="total-income">{{message}}</h4> 
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="three columns" id="expenses">      
+                <div class="six columns">
+                    <div class="image">
+                        <br>
+                        <img src="img/expenses.png">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="six columns">
+                     <div class="card-stacked">
+                        <h1>EXPENSES</h1>
+                        <br>
+                        <h4 id="total-expenses">16,150</h4> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="three columns" id="revenue">         
+                <div class="six columns">
+                    <div class="image">
+                        <br>
+                        <img src="img/revenue.png">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="six columns">
+                     <div class="card-stacked">
+                        <h1>REVENUE</h1>
+                        <br>
+                        <h4 id="total-revenue">16,150</h4> 
+                    </div>
+                </div>
+            </div>
+            <div class="three columns" id="hours">         
+                <div class="six columns">
+                    <div class="image">
+                        <br>
+                        <img src="img/coffee.png">
+                        <br>
+                    </div>
+                </div>
+
+                <div class="six columns">
+                     <div class="card-stacked">
+                        <h1>HOURS</h1>
+                        <br>
+                        <h4>16,150</h4> 
+                    </div>
+                </div>
+            </div>
+        </div>
+           
+           <!-- GRAPHS -->
+          
+        <div>
+            <div class="six columns" id="graph-1">
+            	<span><h2>Graph-1</h2></span>
+            </div>
+            <div class="six columns" id="graph-2">
+            	<span><h2>Graph-2</h2></span>
+            </div>
+        </div>
+          
+            <!-- Plugins -->
+        <div class="row">
+            <div class="four columns" id="weather">
+            	<span><h2>Weather</h2></span>
+            </div>
+            <div class="four columns" id="calendar">
+            	<span><h2>Calendar</h2></span>
+            </div>
+            <div class="four columns" id="clock">
+            	<span><h2>Clock</h2></span>
+            </div>
+        </div>
+
+        <!-- TABLE -->
+    <div class="row">
+        <table>
+          <caption>DATA SUMMARY</caption>
+          <thead>
+            <tr class="three columns">
+              <th scope="col">MONTH</th>
+              <th scope="col">MONTH</th>
+              <th scope="col">MONTH</th>
+              <th scope="col">MONTH</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="three columns" id="january">
+              <td data-label="month"></td>
+              <td data-label="income"></td> 
+              <td data-label="expenses"></td>
+              <td data-label="hours"></td>
+              <td data-label="revenue"></td>
+            </tr>
+            <tr class="three columns">
+              <td data-label="month"></td>
+              <td data-label="income"></td> 
+              <td data-label="expenses"></td>
+              <td data-label="revenue"></td>
+              <td data-label="hours"></td>
+            </tr>
+            <tr class="three columns">
+              <td data-label="month"></td>
+              <td data-label="income"></td> 
+              <td data-label="expenses"></td>
+              <td data-label="revenue"></td>
+              <td data-label="hours"></td>
+            </tr>
+            <tr class="three columns">
+              <td data-label="month"></td>
+              <td data-label="income"></td> 
+              <td data-label="expenses"></td>
+              <td data-label="revenue"></td>
+              <td data-label="hours"></td>
+             </tr>
+          </tbody>
+        </table>
+     </div>
+                <!-- switch -->
+            <header class="row">
+                <div>
+                    <div class="switch-holder">
+                        <span><h4><strong>CHOOSE THEME</strong></h4></span>
+                        <label for="change" class="switch">
+                        <input type="checkbox" id="change" value="change" v-model="checked">
+                        <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </header>
+    </container>
+
+    			<script>
+			function openNav() {
+			    document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+			    document.getElementById("mySidenav").style.width = "0";
+			}
+			</script> 
+    <!-- VueScripts -->
+   <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src='js/application.js'></script>
+</body>
+</html>
