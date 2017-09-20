@@ -1,17 +1,27 @@
-@import 'base';
+@import 'application.scss';
+$font-stack: Helvetica, sans-serif;
+$primary-color: #333;
+$secondary-color: #ffffff;
+$margin-type: 5px;
 
 body {
-  color: #212121;
-  background-color: #cecece;
+  color: $primary-color;
+  background-color: #4e4c4c;
 }
 
 main.Dark{
-  h1 {
-    color: #212121;
+  h1, h2, h3, h4, h5, h6, p {
+   color: $secondary-color;
+   font-family: $font-stack;
+   margin: $margin-type;
   }
 
   i {
-    color: #cecece;
-    background: #212121;
+    color: $secondary-color;
+    background: $primary-color;
   }
+}
+
+.row {
+   background-color:  $primary-color;
 }

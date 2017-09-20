@@ -1,52 +1,241 @@
-/*
-Error: File to import not found or unreadable: base.
-       Load path: /Volumes/Rona/GITHUB/Dashboard/css
-        on line 1 of /Volumes/Rona/GITHUB/Dashboard/css/dark.scss
+@import url("vendor/normalize.css");
+@import url("vendor/skeleton.css");
+body {
+  line-height: 1.25;
+  background: #ffffff;
+  margin: 0; }
 
-1: @import 'base';
-2: 
-3: body {
-4:   color: #212121;
-5:   background-color: #cecece;
-6: }
+h1 {
+  font-size: 20px;
+  letter-spacing: 2px; }
 
-Backtrace:
-/Volumes/Rona/GITHUB/Dashboard/css/dark.scss:1
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:45:in `import'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:28:in `imported_file'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/import_node.rb:37:in `css_import?'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `block in with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:115:in `with_frame'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/stack.rb:79:in `with_base'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:160:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `map'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/base.rb:36:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:159:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/visitors/perform.rb:8:in `visit'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:36:in `css_tree'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:381:in `_render_with_sourcemap'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/engine.rb:298:in `render_with_sourcemap'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:391:in `run'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/sass_scss.rb:63:in `process_result'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:52:in `parse'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/lib/sass/exec/base.rb:19:in `parse!'
-/Applications/Koala.app/Contents/Resources/app.nw/rubygems/gems/sass-3.4.23/bin/sass:13:in `<top (required)>'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `load'
-/Applications/Koala.app/Contents/Resources/app.nw/bin/sass:18:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: base.\A        Load path: /Volumes/Rona/GITHUB/Dashboard/css\A         on line 1 of /Volumes/Rona/GITHUB/Dashboard/css/dark.scss\A \A 1: @import 'base';\A 2: \A 3: body {\A 4:   color: #212121;\A 5:   background-color: #cecece;\A 6: }"; }
+h2 {
+  font-size: 20px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 15px; }
+
+h5, p {
+  font-size: 25px; }
+
+.row {
+  min-height: 200px;
+  width: 100%; }
+
+.row1 {
+  min-height: 50px;
+  width: 100%; }
+
+#header {
+  height: 30px;
+  width: 100%;
+  text-align: right;
+  margin: 3px; }
+
+/* NAV */
+#hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  color: grey;
+  background-color: none;
+  display: block;
+  padding: 10px;
+  z-index: +1;
+  position: fixed;
+  cursor: pointer; }
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 100px; }
+  .sidenav a {
+    padding-top: 40px;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    text-align: center;
+    letter-spacing: 3px; }
+    .sidenav a:hover {
+      color: #333;
+      background-color: #ffffff; }
+
+.offcanvas a:focus {
+  color: #333;
+  background-color: #ffffff; }
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px; }
+
+a.closebtn:hover {
+  background-color: #333; }
+
+#app {
+  transition: margin-left .5s;
+  padding: 20px; }
+
+/* STYLE SHEET TOGGLE */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px; }
+  .switch input {
+    display: none; }
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s; }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #ffffff;
+    -webkit-transition: .4s;
+    transition: .4s; }
+
+input:checked + .slider {
+  background-color: #2196F3; }
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3; }
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px); }
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px; }
+  .slider.round:before {
+    border-radius: 50%; }
+
+/* ROW 1 */
+#absolute {
+  position: absolute; }
+
+.card-stacked {
+  position: relative;
+  text-align: center;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  padding: 3px;
+  z-index: 2; }
+
+.image img {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  z-index: 1;
+  padding: 3px; }
+
+/* TABLE */
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed; }
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em; }
+  table tr {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em; }
+  table th, table td {
+    padding: .625em;
+    text-align: center; }
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase; }
+  table caption {
+    font-size: 1.3em; }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em; }
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right; }
+    table td:before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase; }
+    table td:last-child {
+      border-bottom: 0; }
+
+/* FORM */
+div.form {
+  position: absolute;
+  display: block;
+  align-content: center; }
+
+form {
+  position: relative;
+  display: inline-block;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: left; }
+
+body {
+  color: #333;
+  background-color: #4e4c4c; }
+
+main.Dark h1, main.Dark h2, main.Dark h3, main.Dark h4, main.Dark h5, main.Dark h6, main.Dark p {
+  color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  margin: 5px; }
+main.Dark i {
+  color: #ffffff;
+  background: #333; }
+
+.row {
+  background-color: #333; }
+
+/*# sourceMappingURL=dark.css.map */

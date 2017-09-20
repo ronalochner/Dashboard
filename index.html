@@ -10,12 +10,6 @@
 		<meta name="author" content="Rona Lochner">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-	<!-- CSS Links -->
-    <link rel="stylesheet" href="css/application.css">
-   
-	<!-- TOGGLE Links -->
-    <link rel="stylesheet" href="css/light.scss">
-   
     <!--[if lt IE 9]>
 	<script src="bower_components/html5shiv/dist/html5shiv.js"></script>
     <![endif]-->
@@ -23,6 +17,12 @@
 </head>
 <body>
        <div id="app">
+
+
+           <link rel="stylesheet" v-bind:href="current_template.value">
+           <img class="logo" v-bind:src="current_template.logo"/>
+          
+          
         	<!-- Navigation Starts Here -->
 
 			<div id="mySidenav" class="sidenav"> 
@@ -119,30 +119,6 @@
                 </div>
             </div>
         </div>
-           
-           <!-- GRAPHS -->
-          
-        <div>
-            <div class="six columns" id="graph-1">
-            	<span><h2>Graph-1</h2></span>
-            </div>
-            <div class="six columns" id="graph-2">
-            	<span><h2>Graph-2</h2></span>
-            </div>
-        </div>
-          
-            <!-- Plugins -->
-        <div class="row">
-            <div class="four columns" id="weather">
-            	<span><h2>Weather</h2></span>
-            </div>
-            <div class="four columns" id="calendar">
-            	<span><h2>Calendar</h2></span>
-            </div>
-            <div class="four columns" id="clock">
-            	<span><h2>Clock</h2></span>
-            </div>
-        </div>
 
         <!-- TABLE -->
     <div class="row">
@@ -150,36 +126,34 @@
           <caption>DATA SUMMARY</caption>
           <thead>
             <tr class="three columns">
-                <template>
-                    <th scope="col">MONTH</th>
+                <template  v-for="value in tableHeader(tabledata)">
+                    <th scope="col">{{ value }}</th>
                 </template>
             </tr>
           </thead>
           <tbody>
              <template v-for="value in tabledata">
               <tr class="three columns">
-                  <td>{{ value.month }}</td>
-                  <td>{{ value.income }}</td> 
-                  <td>{{ value.expenses }}</td>
-                  <td>{{ value.hours }}</td>
+                  <td data-label="month">{{ value.month }}</td>
+                  <td data-label="income">{{ value.income }}</td> 
+                  <td data-label="expenses">{{ value.expenses }}</td>
+                  <td data-label="hours">{{ value.hours }}</td>
              </tr>
             </template>
 
           </tbody>
         </table>
      </div>
-                <!-- switch -->
-            <header class="row">
-                <div>
-                    <div class="switch-holder">
-                        <span><h4><strong>CHOOSE THEME</strong></h4></span>
-                        <label for="change" class="switch">
-                        <input type="checkbox" id="change" value="change" v-model="checked">
-                        <span class="slider round"></span>
-                        </label>
-                    </div>
-                </div>
-            </header>
+                      <!-- Linking stylesheets -->
+
+
+         <template v-for="template in templates">
+            <button v-on:click="setTemplate(template.id)">
+               {{ template.name }}
+               <span v-if="template.id == default_template">(Default)</span>
+            </button>
+         </template>
+          
     </div>
 
     			<script>

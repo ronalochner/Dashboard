@@ -1,45 +1,27 @@
 @import url("vendor/normalize.css");
 @import url("vendor/skeleton.css");
 body {
-  font-family: Helvetica, sans-serif;
   line-height: 1.25;
-  color: #333;
   background: #ffffff;
   margin: 0; }
 
 h1 {
-  font-family: Helvetica, sans-serif;
-  color: #333;
   font-size: 20px;
-  margin: 5px;
   letter-spacing: 2px; }
 
 h2 {
-  font-family: Helvetica, sans-serif;
-  color: #333;
-  font-size: 20px;
-  margin: 5px; }
+  font-size: 20px; }
 
 h3 {
-  font-family: Helvetica, sans-serif;
-  color: #333;
-  font-size: 25px;
-  margin: 5px; }
+  font-size: 25px; }
 
 h4 {
-  font-family: Helvetica, sans-serif;
-  color: #333;
-  font-size: 15px;
-  margin: 5px; }
+  font-size: 15px; }
 
 h5, p {
-  font-family: Helvetica, sans-serif;
-  color: #333;
-  font-size: 25px;
-  margin: 5px; }
+  font-size: 25px; }
 
 .row {
-  background: #ffffff;
   min-height: 200px;
   width: 100%; }
 
@@ -173,23 +155,6 @@ input:checked + .slider:before {
   display: block;
   z-index: 1;
   padding: 3px; }
-
-#expenses, #revenue, #hours {
-  background-color: #ffffff; }
-
-/* ROW 2 */
-#graph-1 {
-  background-color: green; }
-
-#graph-2 {
-  background-color: lightskyblue; }
-
-/* ROW 3 */
-#weather {
-  background-color: orange; }
-
-#calendar, #clock {
-  background-color: lightgoldenrodyellow; }
 
 /* TABLE */
 table {

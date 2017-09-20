@@ -6,51 +6,33 @@ $secondary-color: #ffffff;
 @import url('vendor/skeleton.css');
 
 body {
-  font-family: $font-stack;
   line-height: 1.25;
-  color: $primary-color;
   background: $secondary-color;
   margin: 0;
 }
 
 h1 {
-  font-family: $font-stack;
-  color: $primary-color;
   font-size: 20px;
-  margin: 5px;
   letter-spacing: 2px;
 }
 
 h2 {
-  font-family: $font-stack;
-  color: $primary-color;
   font-size: 20px;
-  margin: 5px;
 }
 
 h3 {
-  font-family: $font-stack;
-  color: $primary-color;
   font-size: 25px;
-  margin: 5px;
 }
 
 h4 {
-  font-family: $font-stack;
-  color: $primary-color;
   font-size: 15px;
-  margin: 5px;
 }
 
 h5, p {
-  font-family: $font-stack;
-  color: $primary-color;
   font-size: 25px;
-  margin: 5px;
 }
 
 .row {
-  background: $secondary-color;
   min-height: 200px;
   width: 100%;
 }
@@ -214,29 +196,6 @@ input {
   padding: 3px;
 }
 
-#expenses, #revenue, #hours {
-  background-color: $secondary-color;
-}
-
-/* ROW 2 */
-
-#graph-1 {
-  background-color: green;
-}
-
-#graph-2 {
-  background-color: lightskyblue;
-}
-
-/* ROW 3 */
-
-#weather {
-  background-color: orange;
-}
-
-#calendar, #clock {
-  background-color: lightgoldenrodyellow;
-}
 
 /* TABLE */
 

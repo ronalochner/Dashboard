@@ -1,4 +1,10 @@
+//Stylesheet Buttons
+var templates = [
+   { id: 1, name: 'Dark', value: 'css/dark.css', logo: 'css/dark.css'},
+   { id: 2, name: 'Light', value: 'css/light.css', logo: 'css/light.css'}
+   ];
 
+//DataTables
 var tabledata = [
    {month:'January', income:'5400', expenses:'300', hours:'50'},
    {month:'February', income:'3400', expenses:'300', hours:'100'},
@@ -9,10 +15,27 @@ var tabledata = [
 var app = new Vue ({
    el:'#app',
    data:{
-      tabledata:tabledata
+      tabledata:tabledata,
+      checked:false,
+      templates:templates,
+      default_template: 2,
+      current_template: templates[0]
+   },
+   methods: {
+       tableHeader: function(tableData) {
+      var keys = [];
+      for(key in tableData[0]){
+        keys.push(key);
+      }
+      return keys;
+    },
+      setTemplate: function(id) {
+      var selected_template = this.templates.filter(function(ele){
+      return (ele.id == id)
+      })[0];
+
+      this.current_template = selected_template;
    }
+}
    
 })
-
-
-
