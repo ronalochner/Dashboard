@@ -5,25 +5,28 @@ body {
   background: #ffffff;
   margin: 0; }
 
+h1, h2, h3, h5 {
+  background-color: transparent; }
+
 h1 {
-  font-size: 20px;
-  letter-spacing: 2px; }
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  background-color: transparent; }
 
-h2 {
+h1, h2 {
   font-size: 20px; }
-
-h3 {
-  font-size: 25px; }
 
 h4 {
   font-size: 15px; }
 
-h5, p {
+h5, p, h3 {
   font-size: 25px; }
 
 .row {
   min-height: 200px;
-  width: 100%; }
+  minwidth: 100%; }
 
 .row1 {
   min-height: 50px;
@@ -89,7 +92,8 @@ a.closebtn:hover {
 
 #app {
   transition: margin-left .5s;
-  padding: 20px; }
+  padding: 20px;
+  margin: 5%; }
 
 /* STYLE SHEET TOGGLE */
 .switch {
@@ -160,13 +164,12 @@ input:checked + .slider:before {
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
   width: 100%;
   table-layout: fixed; }
   table caption {
     font-size: 1.5em;
-    margin: .5em 0 .75em; }
+    margin: .5em .5em .5em .5em; }
   table tr {
     background: #f8f8f8;
     border: 1px solid #ddd;
@@ -192,7 +195,8 @@ table {
   table tr {
     border-bottom: 3px solid #ddd;
     display: block;
-    margin-bottom: .625em; }
+    margin-bottom: .625em;
+    margin-top: .625em; }
   table td {
     border-bottom: 1px solid #ddd;
     display: block;
@@ -221,16 +225,74 @@ form {
   display: inline-block;
   margin-left: 20%;
   margin-right: 20%;
+  padding-left: 10px;
+  padding-top: 10px;
   text-align: left; }
 
-body {
-  color: #212121;
-  background-color: #cecece; }
+div.card-stacked {
+  background-color: transparent; }
 
-main.Dark h1 {
-  color: #212121; }
+/* BUTTONS */
+button {
+  margin: 20px; }
+
+/* RESPONSIVE */
+/* Larger than mobile */
+@media screen and (min-width: 600px) {
+  table {
+    border: 0; } }
+@media (min-width: 400px) {
+  h1 {
+    font-size: 1.2em; } }
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+  h1 {
+    font-size: 1.2em; } }
+/* Larger than tablet */
+@media (min-width: 750px) {
+  h1 {
+    font-size: 1.2em; } }
+/* Larger than desktop */
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 0.8em; }
+
+  .img {
+    max-width: 60%;
+    max-height: 60%; } }
+/* Larger than Desktop HD */
+@media (min-width: 1000px) {
+  h1 {
+    font-size: 1.2em; }
+
+  .img {
+    max-width: 50%;
+    max-height: 50%; } }
+body {
+  color: #5a5a5a;
+  background-color: #b2b2b2; }
+
+main.Dark h1, main.Dark h2, main.Dark h3, main.Dark h4, main.Dark h5, main.Dark h6, main.Dark p {
+  color: #5a5a5a;
+  font-family: Helvetica, sans-serif;
+  margin: 5px; }
 main.Dark i {
-  color: #cecece;
-  background: #212121; }
+  color: #5a5a5a;
+  background: #ffffff; }
+
+.row {
+  background-color: #ffffff; }
+
+div {
+  background-color: #ffffff; }
+  div #header {
+    background-color: #82cad3; }
+
+/* TABLE */
+table {
+  border: 1px solid #5a5a5a; }
+  table tr {
+    background: #ffffff;
+    border: 1px solid #5a5a5a; }
 
 /*# sourceMappingURL=light.css.map */

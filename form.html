@@ -10,9 +10,6 @@
 		<meta name="author" content="Rona Lochner">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
    
-	<!-- CSS Links -->
-    <link rel="stylesheet" href="css/application.css">
-   
    	<!-- VUE Links -->
    <script src="https://unpkg.com/vue"></script>
    
@@ -26,7 +23,10 @@
 
 </head>
 <body>
-       <container id="app">
+       <div id="app">
+           
+            <link rel="stylesheet" v-bind:href="current_template.value">
+           <img class="logo" v-bind:src="current_template.logo"/>
         	<!-- Navigation Starts Here -->
 
 			<div id="mySidenav" class="sidenav"> 
@@ -61,12 +61,11 @@
                       <input id="newHours" type="number" name="hours" placeholder="Input the Hours Worked">
                       <label>Hit Submit when you are 100% sure!</label></br>
                      <button type="submit" value="Submit" >SUBMIT</button>
+                </div>
                   </form>
                </div>
             </div>
           
-          
-    </container>
 
     			<script>
 			function openNav() {
@@ -77,5 +76,12 @@
 			    document.getElementById("mySidenav").style.width = "0";
 			}
 			</script> 
+    
+    
+        <!-- VueScripts -->
+   <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vue-meta@1.2.0/lib/vue-meta.js"></script>
+    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+    <script src='js/application.js'></script>
 </body>
 </html>

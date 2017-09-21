@@ -10,47 +10,40 @@ body {
   background: $secondary-color;
   margin: 0;
 }
-
+h1, h2, h3, h5 {
+    background-color: transparent;
+}
 h1 {
-  font-size: 20px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
   letter-spacing: 2px;
+  background-color: transparent;    
 }
-
-h2 {
+h1, h2 {
   font-size: 20px;
 }
-
-h3 {
-  font-size: 25px;
-}
-
 h4 {
   font-size: 15px;
 }
-
-h5, p {
+h5, p, h3 {
   font-size: 25px;
 }
-
 .row {
   min-height: 200px;
-  width: 100%;
+  minwidth: 100%;
 }
-
 .row1 {
   min-height: 50px;
   width: 100%;
 }
-
 #header {
   height: 30px;
   width: 100%;
   text-align: right;
   margin: 3px;
 }
-
 /* NAV */
-
 #hamburger {
   font-size: 30px;
   cursor: pointer;
@@ -62,7 +55,6 @@ h5, p {
   position: fixed;
   cursor: pointer;
 }
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -91,12 +83,10 @@ h5, p {
     }
   }
 }
-
 .offcanvas a:focus {
   color: $primary-color;
   background-color: $secondary-color;
 }
-
 .sidenav .closebtn {
   position: absolute;
   top: 0;
@@ -104,18 +94,15 @@ h5, p {
   font-size: 36px;
   margin-left: 50px;
 }
-
 a.closebtn:hover {
   background-color: $primary-color;
 }
-
 #app {
   transition: margin-left .5s;
   padding: 20px;
+    margin: 5%;
 }
-
 /* STYLE SHEET TOGGLE */
-
 .switch {
   position: relative;
   display: inline-block;
@@ -195,20 +182,16 @@ input {
   z-index: 1;
   padding: 3px;
 }
-
-
 /* TABLE */
-
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
-  margin: 0;
-  padding: 0;
+  margin: 10px;
   width: 100%;
   table-layout: fixed;
   caption {
     font-size: 1.5em;
-    margin: .5em 0 .75em;
+    margin: .5em .5em .5em .5em;
   }
   tr {
     background: #f8f8f8;
@@ -241,6 +224,7 @@ table {
     border-bottom: 3px solid #ddd;
     display: block;
     margin-bottom: .625em;
+    margin-top: .625em;
   }
   td {
     border-bottom: 1px solid #ddd;
@@ -262,19 +246,77 @@ table {
     }
   }
 }
-
 /* FORM */
-
 div.form
 {   position: absolute;
     display: block;
     align-content: center;
 }
-
 form
 {   position: relative;
     display: inline-block;
     margin-left: 20%;
     margin-right: 20%;
+    padding-left: 10px;
+    padding-top: 10px;
     text-align: left;
+}
+
+div.card-stacked{
+    background-color: transparent;
+}
+/* BUTTONS */
+button 
+{margin: 20px;
+}
+
+
+/* RESPONSIVE */
+/* Larger than mobile */
+@media screen and (min-width: 600px) {
+  table {
+    border: 0;
+  }
+
+}
+
+@media (min-width: 400px) {
+      h1 {
+      font-size: 1.2em;
+    }
+}
+/* Larger than phablet (also point when grid becomes active) */
+@media (min-width: 550px) {
+   h1 {
+      font-size: 1.2em;
+    }
+}
+/* Larger than tablet */
+@media (min-width: 750px) {
+   h1 {
+      font-size: 1.2em;
+    }
+}
+
+/* Larger than desktop */
+@media (min-width: 1000px) {
+    h1 {
+      font-size: 0.8em;
+    }
+    .img {
+       max-width: 60%;
+       max-height: 60%;
+  }
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1000px) {
+   h1 {
+      font-size: 1.2em;
+   }
+    
+   .img {
+      max-width: 50%;
+      max-height: 50%;
+  }
 }

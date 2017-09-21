@@ -1,27 +1,40 @@
 @import 'application.scss';
 $font-stack: Helvetica, sans-serif;
-$primary-color: #333;
+$primary-color: #5a5a5a;
 $secondary-color: #ffffff;
+$pop-color:#715caa ;
 $margin-type: 5px;
-
+$background: #4e4c4c;
 body {
-  color: $primary-color;
-  background-color: #4e4c4c;
+  color: $secondary-color;
+  background-color: $background;
 }
-
 main.Dark{
   h1, h2, h3, h4, h5, h6, p {
    color: $secondary-color;
    font-family: $font-stack;
    margin: $margin-type;
   }
-
   i {
     color: $secondary-color;
     background: $primary-color;
   }
 }
-
 .row {
-   background-color:  $primary-color;
+   background-color: $primary-color;
 }
+div {
+  background-color: $primary-color;
+  #header {
+    background-color: $pop-color;
+  }
+}
+/* TABLE */
+table {
+  border: 1px solid $secondary-color;
+  tr {
+    background: $primary-color;
+    border: 1px solid $secondary-color;
+  }
+}
+
