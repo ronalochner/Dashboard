@@ -35,7 +35,26 @@ var app = new Vue ({
       })[0];
 
       this.current_template = selected_template;
-   }
+   },
+      incomeCount: function() {
+      result = this.tabledata.map((item) => {
+        return parseInt(item.income);
+      })
+      return result.reduce((a, b) => a + b, 0)
+    },
+      expenseCount: function() {
+      result = this.tabledata.map((item) => {
+        return parseInt(item.expenses);
+      })
+      return result.reduce((a, b) => a + b, 0)
+    },
+      hoursCount: function() {
+      result = this.tabledata.map((item) => {
+        return parseInt(item.hours);
+      })
+      return result.reduce((a, b) => a + b, 0)
+    },
+
 }
    
 })
