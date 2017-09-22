@@ -38,6 +38,12 @@ h5, p, h3 {
   text-align: right;
   margin: 3px; }
 
+#header1 {
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  margin: 3px; }
+
 /* NAV */
 #hamburger {
   font-size: 30px;
@@ -91,15 +97,10 @@ a.closebtn:hover {
   background-color: #333; }
 
 #app {
-  transition: margin-left .5s;
+  transition: margin-top .5s;
   padding: 20px;
-  margin: 5%; }
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 34px; }
-  .slider.round:before {
-    border-radius: 50%; }
+  margin: 5%;
+  margin-left: 5%; }
 
 /* ROW 1 */
 #absolute {
@@ -107,7 +108,7 @@ a.closebtn:hover {
 
 .card-stacked {
   position: relative;
-  text-align: center;
+  text-align: left;
   margin-top: 30%;
   margin-bottom: 30%;
   padding: 3px;
@@ -117,7 +118,7 @@ a.closebtn:hover {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  display: block;
+  display: inline;
   z-index: 1;
   padding: 3px; }
 
@@ -184,9 +185,9 @@ div.form {
 form {
   position: relative;
   display: inline-block;
-  margin-left: 20%;
-  margin-right: 20%;
-  padding-left: 10px;
+  margin-left: 3%;
+  margin-right: 3%;
+  padding-left: 5px;
   padding-top: 10px;
   text-align: left; }
 
@@ -195,7 +196,11 @@ div.card-stacked {
 
 /* BUTTONS */
 button {
-  margin: 20px; }
+  margin: 20px;
+  margin-left: 0; }
+
+button #submit-button {
+  margin-left: 0; }
 
 /* RESPONSIVE */
 /* Larger than mobile */
@@ -248,6 +253,8 @@ div {
   background-color: #ffffff; }
   div #header {
     background-color: #82cad3; }
+  div #header1 {
+    background-color: #82cad3; }
 
 /* TABLE */
 table {
@@ -255,5 +262,12 @@ table {
   table tr {
     background: #ffffff;
     border: 1px solid #5a5a5a; }
+
+/* FOOTER */
+.row #footer {
+  height: auto;
+  width: 100%;
+  background-color: #82cad3;
+  padding-left: 20px; }
 
 /*# sourceMappingURL=light.css.map */

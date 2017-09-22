@@ -15,6 +15,7 @@ var tabledata = [
 var app = new Vue ({
    el:'#app',
    data:{
+      newMonth:'',
       newIncome:'',
       newExpenses:'',
       newHours:'',
@@ -61,7 +62,9 @@ var app = new Vue ({
         return this.incomeCount () - this.expenseCount ()
      },
       newItem: function () {
-      return this.newIncome
+       this.tabledata.push ({month:this.newMonth, income:this.newIncome, expenses:this.newExpenses, hours:this.newHours})
+
+         
    }
 }
    

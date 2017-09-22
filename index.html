@@ -16,14 +16,8 @@
 
 </head>
 <body>
-       <div id="app">
-
-
-           <link rel="stylesheet" v-bind:href="current_template.value">
-           <img class="logo" v-bind:src="current_template.logo"/>
-          
-          
-        	<!-- Navigation Starts Here -->
+   
+           	<!-- Navigation Starts Here -->
 
 			<div id="mySidenav" class="sidenav"> 
 
@@ -36,6 +30,17 @@
 			</div>
 
 			<span id="hamburger" onclick="openNav()">&#9776;</span>
+   
+   	<!-- App starts Here -->
+   
+       <div id="app">
+
+
+           <link rel="stylesheet" v-bind:href="current_template.value">
+           <img class="logo" v-bind:src="current_template.logo"/>
+          
+          
+
 	
 
 	<!-- Navigation Ends Here -->
@@ -49,19 +54,19 @@
             <div class="three columns">
 
                 <div class="six columns" id="income">
-                    <div class="image">
-                        <br>
-                        <img src="img/income.png">
-                        <br>
-                    </div>
+                  <div class="image">
+                     <br>
+                     <img src="img/income.png">
+                     <br>
+                  </div>
                 </div>
 
                 <div class="six columns">
-                     <div class="card-stacked">
-                        <h1>INCOME</h1>
-                        <br>
-                        <h4 id="total-income">{{ incomeCount() }}</h4> 
-                    </div>
+                  <div class="card-stacked">
+                     <h1>INCOME</h1>
+                     <br>
+                     <h4 id="total-income">{{ incomeCount() }}</h4> 
+                  </div>
                 </div>
 
             </div>
@@ -119,11 +124,15 @@
                 </div>
             </div>
         </div>
+          
+         <!-- TABLE -->         
 
-        <!-- TABLE -->
+
     <div class="row">
         <table>
-          <caption>DATA SUMMARY</caption>
+        <div class="row1" id="header1">
+            <h1>MONTHLY DATA</h1>
+        </div>
           <thead>
             <tr class="three columns">
                 <template  v-for="value in tableHeader(tabledata)">
@@ -144,17 +153,42 @@
           </tbody>
         </table>
      </div>
+          
+                    	<!-- Form starts Here -->   
+          
+        <div class="row1" id="header1">
+            <h1>NEW DATA</h1>
+        </div>
+          
+             <div class="row">
+                <div class="twelve columns">
+                  <form>
+                      <label>MONTH</label>
+                      <input id="newMonth" type="text" name="month" placeholder="Input the Month"  v-model="newMonth">
+                      <label>INCOME</label>
+                      <input id="newIncome" type= "number" name="income" placeholder="Input your Income" v-model="newIncome">
+                      <label>EXPENSES</label>
+                      <input id="newExpenses" type="number" name="expenses" placeholder="Input your Expenses"  v-model="newExpenses">
+                     <label>HOURS WORKED</label>
+                      <input id="newHours" type="number" name="hours" placeholder="Input the Hours Worked"  v-model="newHours">
+                      <label>Hit Submit when you are 100% sure!</label></br>
+                     <button id="submit" type="submit" value="Submit"  v-on:click.stop.prevent= "newItem()">SUBMIT</button>
+                  </form>
+               </div>
+            </div>
                       <!-- Linking stylesheets -->
 
-
-         <template v-for="template in templates">
-            <button v-on:click="setTemplate(template.id)">
-               {{ template.name }}
-               <span v-if="template.id == default_template">(Default)</span>
-            </button>
-         </template>
-          
-    </div>
+               <div class="row">
+                  <div class="twelve columns" id="footer">
+                  <template v-for="template in templates">
+                     <button v-on:click="setTemplate(template.id)">
+                        {{ template.name }}
+                        <span v-if="template.id == default_template">(Default)</span>
+                     </button>
+                  </template>
+                  </div>
+             </div>
+   </div>
 
     			<script>
 			function openNav() {

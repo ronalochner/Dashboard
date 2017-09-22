@@ -28,6 +28,9 @@ div {
   #header {
     background-color: $pop-color;
   }
+  #header1 {
+    background-color: $pop-color;
+  }
 }
 /* TABLE */
 table {
@@ -38,3 +41,10 @@ table {
   }
 }
 
+/* FOOTER */
+.row #footer {
+   height: auto;
+   width: 100%;
+   background-color: $pop-color;
+   padding-left: 20px;
+}
