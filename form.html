@@ -53,18 +53,20 @@
              <div class="row">
                 <div class="twelve columns">
                   <form>
+                      <label>MONTH</label>
+                      <input id="newHours" type="text" name="month" placeholder="Input the Month"  v-model="newMonth">
                       <label>INCOME</label>
-                      <input id="newIncome" type= "number" name="income" placeholder="Input your Income">
+                      <input id="newIncome" type= "number" name="income" placeholder="Input your Income" v-model="newIncome">
                       <label>EXPENSES</label>
-                      <input id="newExpenses" type="number" name="expenses" placeholder="Input your Expenses">
+                      <input id="newExpenses" type="number" name="expenses" placeholder="Input your Expenses"  v-model="newExpenses">
                      <label>HOURS WORKED</label>
-                      <input id="newHours" type="number" name="hours" placeholder="Input the Hours Worked">
+                      <input id="newHours" type="number" name="hours" placeholder="Input the Hours Worked"  v-model="newHours">
                       <label>Hit Submit when you are 100% sure!</label></br>
                      <button type="submit" value="Submit" >SUBMIT</button>
-                </div>
                   </form>
                </div>
             </div>
+     </div>
           
 
     			<script>

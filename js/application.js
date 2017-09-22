@@ -15,6 +15,9 @@ var tabledata = [
 var app = new Vue ({
    el:'#app',
    data:{
+      newIncome:'',
+      newExpenses:'',
+      newHours:'',
       tabledata:tabledata,
       checked:false,
       templates:templates,
@@ -54,7 +57,12 @@ var app = new Vue ({
       })
       return result.reduce((a, b) => a + b, 0)
     },
-
+     revenueCount: function() {
+        return this.incomeCount () - this.expenseCount ()
+     },
+      newItem: function () {
+      return this.newIncome
+   }
 }
    
 })
